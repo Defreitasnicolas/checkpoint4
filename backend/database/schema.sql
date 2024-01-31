@@ -11,6 +11,8 @@ create table artist (
 create table tattoo (
   id int unsigned primary key auto_increment not null,
   style VARCHAR(255) NOT NULL,
-  image VARCHAR(255) NOT NULL
+  image VARCHAR(255) NOT NULL,
+  artist_id int,
+  FOREIGN KEY (artist_id) REFERENCES artist(id)
 );
 
