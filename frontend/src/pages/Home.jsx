@@ -21,8 +21,8 @@ function Home() {
         <img className="imgHome" src={imgHome2} alt="" />
         <img className="imgHome" src={imgHome3} alt="" />
         <img className="imgHome" src={imgHome7} alt="" />
-        <img className="imgHome" src={imgHome8} alt="" />
         <img className="imgHome" src={imgHome4} alt="" />
+        <img className="imgHome" src={imgHome8} alt="" />
         <img className="imgHome" src={imgHome5} alt="" />
         <img className="imgHome" src={imgHome9} alt="" />
         <img className="imgHome" src={imgHome6} alt="" />
