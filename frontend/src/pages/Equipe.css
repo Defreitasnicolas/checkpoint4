@@ -2,4 +2,22 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.artistCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 620px;
+  margin-top: 4rem;
+}
+
+.artistCard p {
+  text-align: left;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
 }
