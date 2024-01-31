@@ -1,7 +1,11 @@
 import React from "react";
 
 function Projets() {
-  return <div>Projets</div>;
+  return (
+    <div className="projectContainer">
+      <img src="" alt="" />
+    </div>
+  );
 }
 
 export default Projets;

@@ -36,7 +36,9 @@ class TattooManager extends AbstractManager {
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all tattoos from the "tattoo" table
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+    const [rows] = await this.database.query(
+      `select tattoo.style, tattoo.image, artist.name as artist from ${this.table} join artist on tattoo.artist_id = artist.id`
+    );
 
     // Return the array of tattoos
     return rows;
