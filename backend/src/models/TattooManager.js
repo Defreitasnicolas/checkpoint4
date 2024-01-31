@@ -9,17 +9,17 @@ class TattooManager extends AbstractManager {
 
   // The C of CRUD - Create operation
 
-  async create(tattoo) {
-    const { style, image } = tattoo;
-    // Execute the SQL INSERT query to add a new tattoo to the "tattoo" table
-    const [result] = await this.database.query(
-      `insert into ${this.table} (style, image) values (?, ?)`,
-      [style, image]
-    );
+  // async create(tattoo) {
+  //   const { style, image } = tattoo;
+  //   // Execute the SQL INSERT query to add a new tattoo to the "tattoo" table
+  //   const [result] = await this.database.query(
+  //     `insert into ${this.table} (style, image) values (?, ?)`,
+  //     [style, image]
+  //   );
 
-    // Return the ID of the newly inserted tattoo
-    return result.insertId;
-  }
+  //   // Return the ID of the newly inserted tattoo
+  //   return result.insertId;
+  // }
 
   // The Rs of CRUD - Read operations
 
@@ -45,26 +45,26 @@ class TattooManager extends AbstractManager {
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing tattoo
 
-  async update(tattoo, id) {
-    // Execute the SQL INSERT query to update the row with tie id on the "tattoo" table
-    const result = await this.database.query(
-      `update ${this.table} set ? where id = ?`,
-      [tattoo, id]
-    );
+  // async update(tattoo, id) {
+  //   // Execute the SQL INSERT query to update the row with tie id on the "tattoo" table
+  //   const result = await this.database.query(
+  //     `update ${this.table} set ? where id = ?`,
+  //     [tattoo, id]
+  //   );
 
-    return result;
-  }
+  //   return result;
+  // }
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an tattoo by its ID
-  async delete(id) {
-    const result = await this.database.query(
-      `delete from ${this.table} where id = ?`,
-      [id]
-    );
+  // async delete(id) {
+  //   const result = await this.database.query(
+  //     `delete from ${this.table} where id = ?`,
+  //     [id]
+  //   );
 
-    return result;
-  }
+  //   return result;
+  // }
 }
 
 module.exports = TattooManager;

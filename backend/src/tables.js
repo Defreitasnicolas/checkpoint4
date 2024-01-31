@@ -3,7 +3,6 @@
 /* ************************************************************************* */
 
 // Import the manager modules responsible for handling data operations on the tables
-const ItemManager = require("./models/ItemManager");
 
 const ArtistManager = require("./models/ArtistManager");
 
@@ -12,7 +11,6 @@ const TattooManager = require("./models/TattooManager");
 const managers = [
   TattooManager,
   ArtistManager,
-  ItemManager,
   // Add other managers here
 ];
 

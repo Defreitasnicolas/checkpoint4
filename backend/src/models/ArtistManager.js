@@ -9,17 +9,17 @@ class ArtistManager extends AbstractManager {
 
   // The C of CRUD - Create operation
 
-  async create(artist) {
-    const { name, speciality, biography, contact } = artist;
-    // Execute the SQL INSERT query to add a new artist to the "artist" table
-    const [result] = await this.database.query(
-      `insert into ${this.table} (name, speciality, biography, contact) values (?, ?, ?, ?)`,
-      [name, speciality, biography, contact]
-    );
+  // async create(artist) {
+  //   const { name, speciality, biography, contact } = artist;
+  //   // Execute the SQL INSERT query to add a new artist to the "artist" table
+  //   const [result] = await this.database.query(
+  //     `insert into ${this.table} (name, speciality, biography, contact) values (?, ?, ?, ?)`,
+  //     [name, speciality, biography, contact]
+  //   );
 
-    // Return the ID of the newly inserted artist
-    return result.insertId;
-  }
+  //   // Return the ID of the newly inserted artist
+  //   return result.insertId;
+  // }
 
   // The Rs of CRUD - Read operations
 
@@ -45,26 +45,26 @@ class ArtistManager extends AbstractManager {
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing artist
 
-  async update(artist, id) {
-    // Execute the SQL INSERT query to update the row with tie id on the "artist" table
-    const result = await this.database.query(
-      `update ${this.table} set ? where id = ?`,
-      [artist, id]
-    );
+  // async update(artist, id) {
+  //   // Execute the SQL INSERT query to update the row with tie id on the "artist" table
+  //   const result = await this.database.query(
+  //     `update ${this.table} set ? where id = ?`,
+  //     [artist, id]
+  //   );
 
-    return result;
-  }
+  //   return result;
+  // }
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an artist by its ID
-  async delete(id) {
-    const result = await this.database.query(
-      `delete from ${this.table} where id = ?`,
-      [id]
-    );
+  // async delete(id) {
+  //   const result = await this.database.query(
+  //     `delete from ${this.table} where id = ?`,
+  //     [id]
+  //   );
 
-    return result;
-  }
+  //   return result;
+  // }
 }
 
 module.exports = ArtistManager;
