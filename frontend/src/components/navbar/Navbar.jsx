@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import logo from "../../../public/darkMoon.jpg";
 
 function Navbar() {
   return (
@@ -10,6 +11,7 @@ function Navbar() {
       <Link to="/equipe" className="link">
         EQUIPE
       </Link>
+      <img src={logo} alt="" width={100} />
       <Link to="/projets" className="link">
         PROJETS
       </Link>
