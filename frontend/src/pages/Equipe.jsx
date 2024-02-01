@@ -22,8 +22,10 @@ function Equipe() {
       {tattooArtist &&
         tattooArtist.map((e) => (
           <div className="artistCard" key={e.id}>
-            <h2>{e.name}</h2>
-            <h3>{e.speciality}</h3>
+            <div className="cardTitle">
+              <h2>{e.name}:</h2>
+              <h2>{e.speciality}</h2>
+            </div>
             <img src={e.image} alt="Le tatoueur" />
             <p>{e.biography}</p>
           </div>

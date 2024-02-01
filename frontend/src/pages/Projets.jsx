@@ -1,9 +1,14 @@
 import React from "react";
+import PresentationGallery from "../components/gallery/PresentationGallery";
+import TattooCard from "../components/tattoosCard/TattooCard";
+import EndGallery from "../components/gallery/EndGallery";
 
 function Projets() {
   return (
     <div className="projectContainer">
-      <img src="" alt="" />
+      <PresentationGallery />
+      <TattooCard />
+      <EndGallery />
     </div>
   );
 }
