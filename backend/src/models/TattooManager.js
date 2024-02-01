@@ -37,10 +37,18 @@ class TattooManager extends AbstractManager {
   async readAll() {
     // Execute the SQL SELECT query to retrieve all tattoos from the "tattoo" table
     const [rows] = await this.database.query(
-      `select tattoo.style, tattoo.image, artist.name as artist from ${this.table} join artist on tattoo.artist_id = artist.id`
+      `select tattoo.id, tattoo.style, tattoo.image, artist.name as artist from ${this.table} join artist on tattoo.artist_id = artist.id`
     );
 
     // Return the array of tattoos
+    return rows;
+  }
+
+  async searchByTattoosName(search) {
+    const [rows] = await this.database.query(
+      `select id, style from ${this.table} where style LIKE ?`,
+      [`%${search}%`]
+    );
     return rows;
   }
 
@@ -59,14 +67,14 @@ class TattooManager extends AbstractManager {
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an tattoo by its ID
-  // async delete(id) {
-  //   const result = await this.database.query(
-  //     `delete from ${this.table} where id = ?`,
-  //     [id]
-  //   );
+  async delete(id) {
+    const result = await this.database.query(
+      `delete from ${this.table} where id = ?`,
+      [id]
+    );
 
-  //   return result;
-  // }
+    return result;
+  }
 }
 
 module.exports = TattooManager;

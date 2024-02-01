@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Projets from "./pages/Projets";
 import Equipe from "./pages/Equipe";
 import Home from "./pages/Home";
+import AdminPage from "./pages/AdminPage";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />,
   },
 ]);
 

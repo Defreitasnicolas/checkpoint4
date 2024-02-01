@@ -9,7 +9,7 @@ router.get("/tattoos", tattooControllers.browse);
 router.get("/tattoos/:id", tattooControllers.read);
 // router.post("/tattoos", validateTattoo, tattooControllers.add);
 // router.put("/tattoos/:id", validateTattoo, tattooControllers.edit);
-// router.delete("/tattoos/:id", tattooControllers.destroy);
+router.delete("/tattoos/:id", tattooControllers.destroy);
 
 const artistControllers = require("./controllers/artistControllers");
 // const validateArtist = require("./validators/validateArtist");
