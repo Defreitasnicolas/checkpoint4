@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import connexion from "../../services/connexion";
 import DeleteButton from "./DeleteButton";
+import "./AdminTable.css";
 
 function AdminTable({ search }) {
   const [TattooData, setTattooData] = useState([]);

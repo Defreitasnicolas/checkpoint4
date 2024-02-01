@@ -16,6 +16,13 @@ function Home() {
       <h1 className="titleHome">
         Bienvenue chez DarkMoon dans le 18e arrondissement de Paris
       </h1>
+      <p className="titleDescriptionHome">
+        Plongez dans l'univers captivant de l'art corporel au cœur du 18e
+        arrondissement de Paris, où l'expression créative prend vie. Notre salon
+        de tatouage est bien plus qu'un lieu où l'on réalise des tatouages
+        exceptionnels. C'est une expérience artistique unique, animée par une
+        équipe passionnée et dévouée.
+      </p>
       <div className="imageContainer">
         <img className="imgHome" src={imgHome1} alt="" />
         <img className="imgHome" src={imgHome2} alt="" />
@@ -33,12 +40,12 @@ function Home() {
           Une Ambiance Chaleureuse et Accueillante
         </h2>
         <p className="description">
-          Chez DarkMoon, nous croyons en plus qu'en la qualité des tatouages.
-          Nous croyons en la création d'une expérience chaleureuse et
-          accueillante pour nos clients. Notre ambiance décontractée et
-          conviviale vous mettra à l'aise dès que vous franchirez nos portes.
-          Nous sommes impatients de partager notre passion avec vous et de
-          transformer vos idées en tatouages uniques et significatifs.
+          Chez DarkMoon, en plus de la qualité des tatouages, Nous croyons en la
+          création d'une expérience chaleureuse et accueillante pour nos
+          clients. Notre ambiance décontractée et conviviale vous mettra à
+          l'aise dès que vous franchirez nos portes. Nous sommes impatients de
+          partager notre passion avec vous et de transformer vos idées en
+          tatouages uniques et significatifs.
         </p>
       </div>
     </>

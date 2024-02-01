@@ -33,3 +33,12 @@
   border-bottom: solid black 1px;
   padding-bottom: 4rem;
 }
+
+.titleDescriptionHome {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+}
