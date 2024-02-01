@@ -11,7 +11,7 @@ function Navbar() {
       <Link to="/equipe" className="link">
         EQUIPE
       </Link>
-      <img src={logo} alt="" width={100} />
+      <img className="logo" src={logo} alt="" width={100} />
       <Link to="/projets" className="link">
         PROJETS
       </Link>
