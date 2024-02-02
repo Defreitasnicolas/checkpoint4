@@ -1,8 +1,17 @@
 .mapContainer {
   display: flex;
   justify-content: center;
+  width: 70vw;
+  margin: auto;
 }
 
 .map {
   border-radius: 10px;
+}
+
+@media screen and (max-width: 651px) {
+  .mapContainer {
+    width: 90vw;
+    margin: auto;
+  }
 }

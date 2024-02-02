@@ -26,7 +26,7 @@ function Equipe() {
               <h2>{e.name}:</h2>
               <h2>{e.speciality}</h2>
             </div>
-            <img src={e.image} alt="Le tatoueur" />
+            <img className="artitsImg" src={e.image} alt="Le tatoueur" />
             <p>{e.biography}</p>
           </div>
         ))}
