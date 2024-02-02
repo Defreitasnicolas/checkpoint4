@@ -16,3 +16,9 @@
 .galleryImage {
   border: solid 1px lightgray;
 }
+
+@media screen and (max-width: 620px) {
+  .galleryImage {
+    width: 370px;
+  }
+}

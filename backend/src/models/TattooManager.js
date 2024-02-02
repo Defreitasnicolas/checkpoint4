@@ -45,7 +45,7 @@ class TattooManager extends AbstractManager {
 
   async searchByTattoosName(search) {
     const [rows] = await this.database.query(
-      `select id, style from ${this.table} where style LIKE ?`,
+      `select id, style, image from ${this.table} where style LIKE ?`,
       [`%${search}%`]
     );
     return rows;

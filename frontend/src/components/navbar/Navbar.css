@@ -11,3 +11,10 @@
   margin: 3rem;
   color: white;
 }
+
+@media screen and (max-width: 650px) {
+  .navbarDesktop {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -40,7 +40,7 @@ function AdminTable({ search }) {
       </thead>
       <tbody>
         {TattooData.map((el) => (
-          <tr key={el.image}>
+          <tr key={el.id}>
             <td>{el.id}</td>
             <td>{el.style}</td>
             <td>{el.image}</td>
