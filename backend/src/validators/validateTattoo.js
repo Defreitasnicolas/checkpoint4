@@ -5,6 +5,7 @@ const getTattooSchema = () => {
     id: Joi.number().presence("optional"),
     style: Joi.string().max(255).presence("required"),
     image: Joi.string().max(255).presence("required"),
+    artist_id: Joi.number().presence("optional"),
   });
 };
 
