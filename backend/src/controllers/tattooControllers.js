@@ -70,21 +70,20 @@ const read = async (req, res, next) => {
 // };
 
 // // The A of BREAD - Add (Create) operation
-// const add = async (req, res, next) => {
-//   // Extract the tattoo data from the request body
-//   const tattoo = req.body;
+const add = async (req, res, next) => {
+  // Extract the tattoo data from the request body
+  const tattoo = req.body;
+  try {
+    // Insert the tattoo into the database
+    const insertId = await tables.tattoo.create(tattoo);
 
-//   try {
-//     // Insert the tattoo into the database
-//     const insertId = await tables.tattoo.create(tattoo);
-
-//     // Respond with HTTP 201 (Created) and the ID of the newly inserted tattoo
-//     res.status(201).json({ ...req.body, id: insertId });
-//   } catch (err) {
-//     // Pass any errors to the error-handling middleware
-//     next(err);
-//   }
-// };
+    // Respond with HTTP 201 (Created) and the ID of the newly inserted tattoo
+    res.status(201).json({ ...req.body, id: insertId });
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
 
 // // The D of BREAD - Destroy (Delete) operation
 // // This operation is not yet implemented
@@ -108,5 +107,5 @@ module.exports = {
   read,
   destroy,
   // edit,
-  // add,
+  add,
 };

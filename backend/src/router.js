@@ -3,11 +3,11 @@ const express = require("express");
 const router = express.Router();
 
 const tattooControllers = require("./controllers/tattooControllers");
-// const validateTattoo = require("./validators/validateTattoo");
+const validateTattoo = require("./validators/validateTattoo");
 
 router.get("/tattoos", tattooControllers.browse);
 router.get("/tattoos/:id", tattooControllers.read);
-// router.post("/tattoos", validateTattoo, tattooControllers.add);
+router.post("/tattoos", validateTattoo, tattooControllers.add);
 // router.put("/tattoos/:id", validateTattoo, tattooControllers.edit);
 router.delete("/tattoos/:id", tattooControllers.destroy);
 

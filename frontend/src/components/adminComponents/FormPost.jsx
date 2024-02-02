@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import connexion from "../../services/connexion";
 import "./FormPost.css";
 
-function Signup() {
+function FormPost() {
   const [formValue, setFormValue] = useState({
-    username: "",
-    email: "",
-    password: "",
+    style: "",
+    image: "",
+    artist_id: "",
   });
 
   const handleChange = (e) => {
@@ -20,9 +20,9 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await connexion.post("/players", formValue);
+      await connexion.post("/tattoos", formValue);
     } catch (error) {
-      console.error("Erreur lors de l'inscription :", error);
+      console.error("Erreur lors de l'envoi :", error);
     }
   };
 
@@ -31,35 +31,31 @@ function Signup() {
       <div className="style">
         <p>Style</p>
         <input
-          label="Nom d'utilisateur"
-          name="username"
+          label="style"
+          name="style"
           type="text"
           onChange={handleChange}
-          value={formValue.username}
-          minLength={3}
-          maxLength={25}
+          value={formValue.style}
         />
       </div>
       <div className="image">
         <p>Image</p>
         <input
-          label="Email"
-          name="email"
-          type="email"
+          label="image"
+          name="image"
+          type="text"
           onChange={handleChange}
-          value={formValue.email}
+          value={formValue.image}
         />
       </div>
       <div className="artist">
         <p>artist_id</p>
         <input
           label="Mot de passe"
-          name="password"
-          type="password"
+          name="artist_id"
+          type="text"
           onChange={handleChange}
-          value={formValue.password}
-          minLength={6}
-          maxLength={25}
+          value={formValue.artist_id}
         />
       </div>
       <div className="buttonPost">
@@ -71,4 +67,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default FormPost;

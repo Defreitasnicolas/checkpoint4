@@ -9,17 +9,16 @@ class TattooManager extends AbstractManager {
 
   // The C of CRUD - Create operation
 
-  // async create(tattoo) {
-  //   const { style, image } = tattoo;
-  //   // Execute the SQL INSERT query to add a new tattoo to the "tattoo" table
-  //   const [result] = await this.database.query(
-  //     `insert into ${this.table} (style, image) values (?, ?)`,
-  //     [style, image]
-  //   );
+  async create(tattoo) {
+    // Execute the SQL INSERT query to add a new tattoo to the "tattoo" table
+    const [result] = await this.database.query(
+      `insert into ${this.table} (style, image, artist_id) values (?, ?, ?)`,
+      [tattoo.style, tattoo.image, tattoo.artist_id]
+    );
 
-  //   // Return the ID of the newly inserted tattoo
-  //   return result.insertId;
-  // }
+    // Return the ID of the newly inserted tattoo
+    return result.insertId;
+  }
 
   // The Rs of CRUD - Read operations
 
